@@ -3,8 +3,9 @@ package easv.mrs.BLL;
 import easv.mrs.BE.Movie;
 import easv.mrs.BLL.util.MovieSearcher;
 import easv.mrs.DAL.IMovieDataAccess;
-import easv.mrs.DAL.MovieDAO_Mock;
+import easv.mrs.DAL.MovieDAO;
 
+import java.io.IOException;
 import java.util.List;
 
 public class MovieManager {
@@ -13,8 +14,8 @@ public class MovieManager {
 
     private IMovieDataAccess movieDAO;
 
-    public MovieManager() {
-        movieDAO = new MovieDAO_Mock();
+    public MovieManager() throws IOException {
+        movieDAO = new MovieDAO();
     }
 
     public List<Movie> getAllMovies() throws Exception {
@@ -26,5 +27,7 @@ public class MovieManager {
         List<Movie> searchResult = movieSearcher.search(allMovies, query);
         return searchResult;
     }
-
+    public void createNewMovie(int year, String title) throws Exception {
+        movieDAO.createMovie(title, year);
+    }
 }

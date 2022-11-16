@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="easv.mrs.GUI.Controller.MovieViewController">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+<AnchorPane focusTraversable="true" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="easv.mrs.GUI.Controller.MovieViewController">
    <children>
-      <ListView fx:id="lstMovies" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-      <TextField fx:id="txtMovieSearch" />
+      <GridPane alignment="CENTER" hgap="10.0" prefHeight="400.0" prefWidth="600.0" snapToPixel="false" vgap="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+         <children>
+            <ListView fx:id="lstMovies" prefHeight="200.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+            <TextField fx:id="txtMovieSearch" promptText="Search for a movie..." GridPane.rowIndex="1" />
+            <Label alignment="CENTER" text="Movie Recommendation System" textAlignment="CENTER" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titleLbl" maxWidth="200.0" prefWidth="200.0" promptText="Title" GridPane.rowIndex="3" />
+            <TextField fx:id="yearLbl" cacheShape="false" centerShape="false" maxWidth="200.0" promptText="Year" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addMov" prefHeight="26.0" prefWidth="158.0" text="Add Movie" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
    </children>
-</GridPane>
+</AnchorPane>
