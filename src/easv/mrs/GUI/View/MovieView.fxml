@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -21,6 +22,7 @@
             <RowConstraints />
             <RowConstraints />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
          </rowConstraints>
          <children>
             <ListView fx:id="lstMovies" prefHeight="200.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
@@ -33,6 +35,17 @@
             <TextField fx:id="titleLbl" maxWidth="200.0" prefWidth="200.0" promptText="Title" GridPane.rowIndex="3" />
             <TextField fx:id="yearLbl" cacheShape="false" centerShape="false" maxWidth="200.0" promptText="Year" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
             <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addMov" prefHeight="26.0" prefWidth="158.0" text="Add Movie" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Button fx:id="RemoveBtn" alignment="CENTER" mnemonicParsing="false" onAction="#handleRemoveMovie" text="Remove Movie" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Button fx:id="updMov" mnemonicParsing="false" onAction="#handleUpdateMovie" text="Update Movie" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="213.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="rateMovie" mnemonicParsing="false" onAction="#handleRateMovie" text="Rate Movie" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="200.0" />
+               </GridPane.margin>
+            </Button>
          </children>
       </GridPane>
    </children>

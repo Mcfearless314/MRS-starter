@@ -67,4 +67,14 @@ public class MovieViewController implements Initializable {
 
         movieModel.createNewMovie(title, year);
     }
+
+    public void handleRemoveMovie(ActionEvent actionEvent) {
+        
+    }
+
+    public void handleUpdateMovie(ActionEvent actionEvent) {
+    }
+
+    public void handleRateMovie(ActionEvent actionEvent) {
+    }
 }

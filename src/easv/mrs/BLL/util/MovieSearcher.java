@@ -12,10 +12,11 @@ public class MovieSearcher {
         List<Movie> searchResult = new ArrayList<>();
 
         for (Movie movie : searchBase) {
-            if(compareToMovieTitle(query, movie) || compareToMovieYear(query, movie))
+            if (compareToMovieTitle(query, movie) || compareToMovieYear(query, movie))
             {
                 searchResult.add(movie);
             }
+
         }
 
         return searchResult;
@@ -28,5 +29,6 @@ public class MovieSearcher {
     private boolean compareToMovieTitle(String query, Movie movie) {
         return movie.getTitle().toLowerCase().contains(query.toLowerCase());
     }
+
 
 }
